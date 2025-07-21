@@ -12,3 +12,8 @@ resource "aws_instance" "example" {
     Name = "MyEC2Instance-${count.index + 1}"
   }
 }
+ 
+# Output the public IPs of the instances
+output "instance_public_ips" {
+  value = aws_instance.example[*].public_ip
+}
