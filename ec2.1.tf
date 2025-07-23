@@ -3,7 +3,7 @@ provider "aws" {
 }
  
 # EC2 instances
-resource "aws_instance" "examination" {
+resource "aws_instance" "examin" {
   count         = 3
   ami           = "ami-0a0409af1cb831414"
   instance_type = "t2.micro"
@@ -15,5 +15,5 @@ resource "aws_instance" "examination" {
  
 # Output the public IPs of the instances
 output "instance_public_ips" {
-  value = aws_instance.examination[*].public_ip
+  value = aws_instance.examin[*].public_ip
 }
