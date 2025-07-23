@@ -15,5 +15,5 @@ resource "aws_instance" "example5" {
  
 # Output the public IPs of the instances
 output "instance_public_ips" {
-  value = aws_instance.example[*].public_ip
+  value = aws_instance.example5[*].public_ip
 }
